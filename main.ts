@@ -7,12 +7,18 @@
 // Outside the grader's container, MAKEFUN_OUTPUT_DIR stands in for /output:
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 
-import { copyFileSync, mkdirSync } from 'node:fs';
+import { copyFileSync, existsSync, mkdirSync, statSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 // An empty MAKEFUN_OUTPUT_DIR counts as unset: fall back to /output.
 const outDir = process.env.MAKEFUN_OUTPUT_DIR || '/output';
 const here = dirname(fileURLToPath(import.meta.url));
+const src = join(here, 'entry.png');
+// Fail fast with a clear message if the entry image is missing, instead of
+// a bare ENOENT stack from copyFileSync.
+if (!existsSync(src) || !statSync(src).isFile()) {
+  throw new Error(`news-image-20261117: entry image not found at ${src}`);
+}
 mkdirSync(outDir, { recursive: true });
-copyFileSync(join(here, 'entry.png'), join(outDir, 'entry.png'));
+copyFileSync(src, join(outDir, 'entry.png'));
