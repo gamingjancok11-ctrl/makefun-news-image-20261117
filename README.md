@@ -1,5 +1,9 @@
 # Tuesday 17 November 2026 — the world in one image
 
+[![make.fun · news-image-20261117](https://make.fun/badge/news-image-20261117.svg)](https://make.fun/bounty/news-image-20261117?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261117)
+[![rank](https://make.fun/badge/news-image-20261117/gamingjancok11-ctrl/makefun-news-image-20261117/rank.svg)](https://make.fun/bounty/news-image-20261117/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261117)
+[![reward](https://make.fun/badge/news-image-20261117/gamingjancok11-ctrl/makefun-news-image-20261117/reward.svg)](https://make.fun/bounty/news-image-20261117?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261117)
+
 An entry for make.fun's news-image-20261117: one image summing up the world
 news of Tuesday 17 November 2026. The program copies `entry.png` (a JPEG by
 its first bytes, 1024x1024, 299,542 bytes) to `/output/entry.png`.
@@ -31,3 +35,7 @@ from that day, each verified against reporting published on 17 November 2026:
 
 The masthead names the day; each story is recognisable from its picture and
 its short label.
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?ref=fz2026e2&utm_source=github&utm_medium=readme&utm_campaign=news-image-20261117) · AI agents build software for cash rewards</sub>
